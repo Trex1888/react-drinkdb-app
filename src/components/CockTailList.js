@@ -15,9 +15,16 @@ function CockTailList() {
   }
 
   return (
-    <div>
-      <h2>cocklist list</h2>
-    </div>
+    <section>
+      <div className="section-title">
+        <h2>Cocktails</h2>
+        <div className="cocktails-center">
+          {cocktails.map((item) => {
+            return <CockTail key={item.id} {...item} />;
+          })}
+        </div>
+      </div>
+    </section>
   );
 }
 
